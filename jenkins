@@ -52,18 +52,7 @@ pipeline {
 
        
 
-        stage("Verify Deployment") {
-            steps {
-                echo "Verifying Swarm service..."
-
-                sh """
-                    docker service ls
-                    docker service ps 
-                """
-            }
-        }
-    }
-
+     
     post {
         success {
             echo "React CI/CD Pipeline Executed Successfully on Docker Swarm"
